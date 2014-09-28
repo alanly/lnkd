@@ -11,7 +11,7 @@
 |
 */
 
-$router->get('/', 'App\Http\Controllers\SiteController@loadHome');
-$router->post('/', 'App\Http\Controllers\SiteController@addLink');
+$router->get('/', 'SiteController@loadHome');
+$router->post('/', 'SiteController@addLink');
 
-$router->get('/{key}', 'App\Http\Controllers\SiteController@loadLink');
+$router->get('/{key}', 'SiteController@loadLink');
