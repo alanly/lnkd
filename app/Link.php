@@ -5,9 +5,9 @@ use App\ValidatedModel;
 class Link extends ValidatedModel {
 
 	protected $hidden   = ['id'];
-	protected $fillable = ['key', 'url'];
+	protected $fillable = ['key', 'url', 'creator'];
 	protected $rules    = [
-		'key' => 'required|unique:links,key,<id>',
+		'key' => 'unique:links,key,<id>',
 		'url' => 'required|url'
 	];
 
