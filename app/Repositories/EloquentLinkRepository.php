@@ -12,7 +12,7 @@ class EloquentLinkRepository implements LinkRepository {
 		$this->model = $link;
 	}
 
-	public function delete($model)
+	public function delete(Link $model)
 	{
 		return $model->delete();
 	}
