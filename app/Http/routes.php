@@ -11,6 +11,7 @@
 |
 */
 
-$router->get('/', 'HomeController@index');
+$router->get('/', 'App\Http\Controllers\SiteController@loadHome');
+$router->post('/', 'App\Http\Controllers\SiteController@addLink');
 
-$router->resource('urls', 'UrlsController');
+$router->get('/{key}', 'App\Http\Controllers\SiteController@loadLink');
