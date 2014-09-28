@@ -22,8 +22,6 @@ class ValidatedModel extends Model {
 	{
 		if (! $this->rules) throw new MissingValidationRuleException();
 
-		if (! $this->validator) throw new MissingValidatorInstanceException();
-
 		return $this->validateInstance();
 	}
 
