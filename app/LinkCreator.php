@@ -16,6 +16,12 @@ class LinkCreator {
 
 	public function create(LinkCreationObserver $observer, $url)
 	{
+		// Check if the link is already in the database.
+		if ($link = $this->links->getByUrl($url))
+		{
+			return $observer->linkCreated($link);
+		}
+
 		// Create initial instance.
 		$link = $this->links->makeNew();
 		$link->url = $url;

@@ -22,6 +22,11 @@ class EloquentLinkRepository implements LinkRepository {
 		return $this->model->where('key', $key)->first();
 	}
 
+	public function getByUrl($url)
+	{
+		return $this->model->where('url', $url)->first();
+	}
+
 	public function makeNew(array $attributes = [])
 	{
 		return $this->model->newInstance($attributes);
