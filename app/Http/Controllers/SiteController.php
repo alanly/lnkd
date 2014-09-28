@@ -29,7 +29,7 @@ class SiteController extends Controller implements LinkCreationObserver {
 
 		// Increment the counter
 		$link->count = $link->count + 1;
-		$links->save($link);
+		$this->links->save($link);
 
 		return Redirect::to($link->url);
 	}
