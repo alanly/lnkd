@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Link;
 use App\LinkCreationObserver;
 use App\Repositories\LinkRepository;
 
