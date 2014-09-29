@@ -37,20 +37,41 @@
 			.user-control {
 				margin-top: 2rem;
 			}
-			input[type="text"] {
-				background-color: #cdbfe3;
+			.url-input {
+				background-color: rgba(205, 191, 227, 0.7);
 				border: 0;
 				border-radius: 2px;
 				color: #563d7c;
+				display: block;
 				padding: 1rem 1.25rem;
 				text-align: center;
 				width: 100%;
 			}
-			input[type="text"]::-webkit-input-placeholder {
-				color: #563d7c;
+			.url-input::-webkit-input-placeholder {
+				color: rgba(86, 61, 124, 0.6);
 			}
-			input[type="text"]:active {
+			.url-input:focus {
+				background-color: rgba(205, 191, 227, 0.9);
 				border: 0;
+				box-shadow: 0;
+				outline: 0;
+			}
+			.url-submit {
+				background-color: rgba(205, 191, 227, 0.7);
+				border: 0;
+				border-radius: 2px;
+				color: #563d7c;
+				display: block;
+				margin: 1rem auto;
+				padding: 0.5rem 1rem;
+			}
+			.url-submit:focus {
+				border: 0;
+				box-shadow: 0;
+				outline: 0;
+			}
+			.url-submit:active {
+				background-color: rgba(205, 191, 227, 0.9);
 			}
 		</style>
 	</head>
@@ -63,7 +84,8 @@
 			</header>
 
 			<div class="user-control">
-				<input type="text" id="link-input-box" name="url" placeholder="Link to shorten...">
+				<input type="text" id="link-input-box" class="url-input" name="url" placeholder="Link to shorten...">
+				<button type="button" class="url-submit">enshorten</button>
 			</div>
 		</div>
 	</body>
