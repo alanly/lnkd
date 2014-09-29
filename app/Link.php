@@ -11,6 +11,11 @@ class Link extends ValidatedModel {
 		'url' => 'required|url'
 	];
 
+	public function getShortLink()
+	{
+		return action('SiteController@loadLink', ['key' => $this->key]);
+	}
+
 	public function urlEncode($data)
 	{
 		return rtrim(strtr(base64_encode($data), '+/', '-_'), '=');

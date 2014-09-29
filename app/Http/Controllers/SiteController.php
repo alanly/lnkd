@@ -47,7 +47,7 @@ class SiteController extends Controller implements LinkCreationObserver {
 
 	public function linkCreated(Link $link)
 	{
-		return $link->toJson();
+		return view('created')->with('link', $link);
 	}
 
 	public function linkValidationError($errors)
