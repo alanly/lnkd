@@ -18,7 +18,7 @@ class SiteController extends Controller implements LinkCreationObserver {
 
 	public function loadHome()
 	{
-		return "Lnkd";
+		return view('index');
 	}
 
 	public function loadLink($key)
